@@ -1,0 +1,58 @@
+<!doctype html><html lang="en" data-theme="light"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Vinod Kumar N">
+  <meta name="theme-color" content="#f4f7f9">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+<title>EACM Selection Bot | Vinod Kumar N</title>
+  <meta name="description" content="Case study: deterministic Python desktop automation for Excel-driven EACM Product Structure selection, exact reconciliation, logging, and audit reporting.">
+  <link rel="canonical" href="https://vinod2612-lab.github.io/projects/eacm-selection-bot.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EACM Selection Bot | Vinod Kumar N">
+  <meta property="og:description" content="Case study: deterministic Python desktop automation for Excel-driven EACM Product Structure selection, exact reconciliation, logging, and audit reporting.">
+  <meta property="og:url" content="https://vinod2612-lab.github.io/projects/eacm-selection-bot.html">
+  <meta property="og:image" content="https://vinod2612-lab.github.io/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EACM Selection Bot | Vinod Kumar N">
+  <meta name="twitter:description" content="Case study: deterministic Python desktop automation for Excel-driven EACM Product Structure selection, exact reconciliation, logging, and audit reporting.">
+  <meta name="twitter:image" content="https://vinod2612-lab.github.io/assets/og-card.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Vinod Kumar N", "url": "https://vinod2612-lab.github.io", "jobTitle": "Data Specialist", "email": "mailto:neelavinod26@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN"}, "sameAs": ["https://www.linkedin.com/in/vinod-kumar-n-34484a241"], "knowsAbout": ["Python automation", "Enterprise data tooling", "Data validation", "Excel automation", "Desktop automation", "Django", "Retrieval-augmented generation"]}</script></head><body><a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" id="top">
+  <div class="nav-shell">
+    <a class="brand" href="../index.html" aria-label="Vinod Kumar N home"><span class="brand-mark">VK</span><span class="brand-name">Vinod Kumar N</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a href="../assets/Vinod_Kumar_N_Resume.pdf">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle light/dark theme"><span class="theme-icon" aria-hidden="true">Moon</span></button>
+  </div>
+</header><main id="main">
+<section class="project-hero section-tight"><div class="container narrow reveal"><a class="back-link" href="../index.html#projects">← Back to projects</a><p class="eyebrow">Flagship Project 01 · Desktop Automation</p><h1>EACM Selection Bot</h1><p class="project-lead">A deterministic Python automation system for reading Excel Machine Type / Model / Feature Code records, locating the exact EACM Product Structure rows, selecting them, reconciling the result, and producing an auditable run record.</p><p class="role-callout"><strong>Role: Project Lead & Sole Developer</strong><br>Identified the repetitive manual feature-selection workflow, designed the automation and reconciliation approach, and built the end-to-end Python solution from Excel ingestion through EACM selection, verification, logging, and audit reporting.</p></div></section>
+<section class="section"><div class="container detail-grid"><aside class="detail-nav"><strong>Case study</strong><a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#architecture">Architecture</a><a href="#impact">Impact</a><a href="#validation">Validation</a><a href="#challenges">Challenges</a><a href="#evidence">Evidence</a></aside><div class="detail-content">
+<section id="problem" class="detail-section reveal"><p class="eyebrow">Problem</p><h2>Manual grid selection was repetitive and hard to verify at scale.</h2><p>The documented workflow requires a Data Specialist to compare RFA Excel records with EACM and select feature-code rows in the Product Structure grid. The automation targets the repetitive portions while preserving exact identity and auditability.</p></section>
+<section id="solution" class="detail-section reveal"><p class="eyebrow">Solution</p><h2>A deterministic selection pipeline with reconciliation built in.</h2><div class="feature-list"><div><strong>1. Ingest</strong><p>Read the RFA workbook and discover the required Feature data columns.</p></div><div><strong>2. Normalize</strong><p>Split MTM into Machine Type and Model, normalize identifiers, validate rows, and detect duplicates.</p></div><div><strong>3. Discover</strong><p>Focus EACM, open Product Structure, scan the grid, and build composite row identities.</p></div><div><strong>4. Select</strong><p>Use deterministic keyboard-driven selection rather than AI-based matching.</p></div><div><strong>5. Reconcile</strong><p>Read selected row identities from the clipboard and compare them against the expected selection set.</p></div><div><strong>6. Audit</strong><p>Write run logs, final status buckets, and a 19-column Excel audit workbook.</p></div></div></section>
+<section id="architecture" class="detail-section reveal"><p class="eyebrow">Architecture / Workflow</p><h2>Excel input → validated plan → EACM automation → exact reconciliation → audit output.</h2><div class="workflow horizontal"><div>RFA Excel</div><b>→</b><div>Normalize & validate</div><b>→</b><div>Plan & batch</div><b>→</b><div>EACM discovery</div><b>→</b><div>Deterministic selection</div><b>→</b><div>Clipboard reconciliation</div><b>→</b><div>Audit workbook</div></div></section>
+<section id="impact" class="detail-section reveal"><p class="eyebrow">Impact</p><h2>Reduced a repetitive desktop-selection task from minutes to a fast, reconciled workflow.</h2><div class="impact-metric-grid"><div><strong>15–30 min</strong><span>typical manual feature-selection time before automation</span></div><div><strong>&lt;5 min</strong><span>typical automated execution time</span></div><div><strong>249 records</strong><span>largest real run completed</span></div><div><strong>100%</strong><span>expected-vs-selected reconciliation across verified production runs to date</span></div></div><p class="evidence-note">The bot is actively used in production by the team on a daily basis. The 249-record run size reflects the operating constraint that the EACM tool allows a maximum selection of 250 records at a time.</p></section>
+<section id="validation" class="detail-section reveal"><p class="eyebrow">Engineering Validation</p><h2>Technical quality indicators support the implementation, but do not replace business impact.</h2><div class="validation-grid"><div><strong>1,123</strong><span>passing tests</span></div><div><strong>88%</strong><span>statement coverage</span></div><div><strong>19</strong><span>audit columns</span></div><div><strong>Exact identity</strong><span>post-selection reconciliation</span></div></div></section>
+<section id="challenges" class="detail-section reveal"><p class="eyebrow">Technical Challenges</p><h2>Automating a stateful legacy desktop grid requires stronger verification than a simple click script.</h2><ul class="detail-list"><li>Preserving Machine Type / Model / Feature identity so same-feature collisions across models do not become false matches.</li><li>Scanning a desktop grid without a modern API and detecting row/bottom boundaries safely.</li><li>Maintaining deterministic selection state across keyboard and clipboard operations.</li><li>Reconciling what the automation intended to select against what EACM actually reports as selected.</li><li>Producing logs and audit output that support troubleshooting and review.</li></ul></section>
+<section id="evidence" class="detail-section reveal"><p class="eyebrow">Evidence / Demo</p><h2>Confidentiality-safe synthetic demonstration.</h2><p class="demo-label">Synthetic demonstration data — not IBM production data</p><div class="demo-grid"><div class="demo-window"><div class="demo-title">Sanitized Excel input</div><div class="table-scroll"><table><thead><tr><th>MTM</th><th>Feature</th><th>Status</th></tr></thead><tbody><tr><td>1234-X01</td><td>A1B2</td><td>Ready</td></tr><tr><td>1234-X01</td><td>C3D4</td><td>Ready</td></tr><tr><td>5678-Y02</td><td>E5F6</td><td>Ready</td></tr></tbody></table></div></div><div class="demo-window"><div class="demo-title">Recreated desktop interaction</div><div class="fake-app"><div class="fake-toolbar">Product Structure · Demo</div><div class="fake-row selected">1234 | X01 | A1B2 <span>selected</span></div><div class="fake-row selected">1234 | X01 | C3D4 <span>selected</span></div><div class="fake-row">1234 | X01 | G7H8</div><div class="fake-row selected">5678 | Y02 | E5F6 <span>selected</span></div></div></div><div class="demo-window wide"><div class="demo-title">Audit / reconciliation summary</div><div class="summary-badges"><span>Expected: 3</span><span>Selected: 3</span><span>Missing: 0</span><span>Extra: 0</span><span class="pass">Status: Reconciled</span></div></div></div></section>
+<section class="detail-section reveal"><p class="eyebrow">Technologies</p><div class="tags large"><span>Python</span><span>OpenPyXL</span><span>pywinauto</span><span>PyAutoGUI</span><span>Pyperclip</span><span>INI / configparser</span><span>pytest</span><span>Windows desktop automation</span></div></section>
+</div></div></section></main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Vinod Kumar N</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/vinod-kumar-n-34484a241" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:neelavinod26@gmail.com">Email</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer><script src="../js/script.js"></script></body></html>
