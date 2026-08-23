@@ -1,0 +1,58 @@
+<!doctype html><html lang="en" data-theme="light"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Vinod Kumar N">
+  <meta name="theme-color" content="#f4f7f9">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+<title>EACM Guide Assistant | Vinod Kumar N</title>
+  <meta name="description" content="Case study: Django internal knowledge assistant with deterministic routing, BM25 retrieval, IBM watsonx.ai generation, and citation/grounding validation.">
+  <link rel="canonical" href="https://vinod2612-lab.github.io/projects/eacm-guide-assistant.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EACM Guide Assistant | Vinod Kumar N">
+  <meta property="og:description" content="Case study: Django internal knowledge assistant with deterministic routing, BM25 retrieval, IBM watsonx.ai generation, and citation/grounding validation.">
+  <meta property="og:url" content="https://vinod2612-lab.github.io/projects/eacm-guide-assistant.html">
+  <meta property="og:image" content="https://vinod2612-lab.github.io/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EACM Guide Assistant | Vinod Kumar N">
+  <meta name="twitter:description" content="Case study: Django internal knowledge assistant with deterministic routing, BM25 retrieval, IBM watsonx.ai generation, and citation/grounding validation.">
+  <meta name="twitter:image" content="https://vinod2612-lab.github.io/assets/og-card.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Vinod Kumar N", "url": "https://vinod2612-lab.github.io", "jobTitle": "Data Specialist", "email": "mailto:neelavinod26@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN"}, "sameAs": ["https://www.linkedin.com/in/vinod-kumar-n-34484a241"], "knowsAbout": ["Python automation", "Enterprise data tooling", "Data validation", "Excel automation", "Desktop automation", "Django", "Retrieval-augmented generation"]}</script></head><body><a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" id="top">
+  <div class="nav-shell">
+    <a class="brand" href="../index.html" aria-label="Vinod Kumar N home"><span class="brand-mark">VK</span><span class="brand-name">Vinod Kumar N</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a href="../assets/Vinod_Kumar_N_Resume.pdf">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle light/dark theme"><span class="theme-icon" aria-hidden="true">Moon</span></button>
+  </div>
+</header><main id="main">
+<section class="project-hero section-tight"><div class="container narrow reveal"><a class="back-link" href="../index.html#projects">← Back to projects</a><p class="eyebrow">Flagship Project 03 · AI-enabled Internal Tooling</p><h1>EACM Guide Assistant</h1><p class="project-lead">A grounded internal knowledge assistant that combines deterministic process/domain routing, BM25 retrieval, parent-context expansion, IBM watsonx.ai generation, structured output, and citation validation behind a Django web interface.</p><p class="role-callout"><strong>Role: Project Lead & Developer</strong><br>Identified the difficulty of reliably retrieving procedural information from enterprise guides and led development of a grounded knowledge assistant covering ingestion, deterministic routing, retrieval, context handling, AI generation, grounding validation, testing, and web delivery.</p></div></section>
+<section class="section"><div class="container detail-grid"><aside class="detail-nav"><strong>Case study</strong><a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#architecture">Architecture</a><a href="#impact">Impact</a><a href="#validation">Validation</a><a href="#challenges">Challenges</a><a href="#evidence">Evidence</a></aside><div class="detail-content">
+<section id="problem" class="detail-section reveal"><p class="eyebrow">Problem</p><h2>Retrieval quality matters when users depend on procedural guidance.</h2><p>The project addresses wrong-guide / wrong-domain retrieval and reliable access to approved process documentation. Deterministic process classification and hard applicability filtering are used before BM25 retrieval to reduce domain mistakes.</p></section>
+<section id="solution" class="detail-section reveal"><p class="eyebrow">Solution</p><h2>A grounded retrieval pipeline with explicit controls before and after generation.</h2><div class="feature-list"><div><strong>Document ingestion</strong><p>Convert and normalize PDF, DOCX, HTML, and Markdown guide content into structured retrieval artifacts.</p></div><div><strong>Process / domain routing</strong><p>Classify and route questions before retrieval; request clarification when needed.</p></div><div><strong>BM25 retrieval</strong><p>Retrieve lexical candidates from approved document scope without a vector database.</p></div><div><strong>Context expansion</strong><p>Restore parent context, citations, provenance, and context budgets around retrieved chunks.</p></div><div><strong>watsonx.ai generation</strong><p>Generate structured answer blocks through a provider boundary.</p></div><div><strong>Grounding validation</strong><p>Strictly parse structured output and validate citation IDs against the supplied prompt/context before returning a public response.</p></div></div></section>
+<section id="architecture" class="detail-section reveal"><p class="eyebrow">Architecture / Workflow</p><h2>User question → routed retrieval → grounded generation → evidence-backed answer.</h2><div class="workflow vertical-flow"><div>User Question</div><b>↓</b><div>Detected Process / Domain</div><b>↓</b><div>Applicability Filter + BM25 Retrieval</div><b>↓</b><div>Parent Context + Sources</div><b>↓</b><div>IBM watsonx.ai Generation</div><b>↓</b><div>Structured Output + Citation / Grounding Validation</div><b>↓</b><div>Evidence-Backed Answer</div></div></section>
+<section id="impact" class="detail-section reveal"><p class="eyebrow">Impact</p><h2>Business/adoption metrics need to come from actual usage evidence.</h2><div class="impact-metric-grid"><div><strong class="input-required">[INPUT REQUIRED]</strong><span>Users supported</span></div><div><strong class="input-required">[INPUT REQUIRED]</strong><span>Average lookup time before</span></div><div><strong class="input-required">[INPUT REQUIRED]</strong><span>Average answer time / time saved</span></div><div><strong class="input-required">[INPUT REQUIRED]</strong><span>Verified adoption or satisfaction metric</span></div></div></section>
+<section id="validation" class="detail-section reveal"><p class="eyebrow">Engineering Validation</p><h2>Tests and controlled output validation support reliability claims.</h2><div class="validation-grid"><div><strong>1,498</strong><span>passing tests</span></div><div><strong>0</strong><span>test failures</span></div><div><strong>4 formats</strong><span>PDF · DOCX · HTML · Markdown ingestion</span></div><div><strong>Citations</strong><span>strict structured parsing + grounding validation</span></div></div></section>
+<section id="challenges" class="detail-section reveal"><p class="eyebrow">Technical Challenges</p><h2>Grounded AI is more than sending retrieved text to an LLM.</h2><ul class="detail-list"><li>Preventing wrong-domain retrieval before generation rather than trying to fix it only in the prompt.</li><li>Restoring enough parent context to answer correctly without overflowing context budgets.</li><li>Maintaining source provenance from ingestion through retrieval, context packaging, generation, and browser rendering.</li><li>Rejecting malformed or unsupported structured output rather than silently displaying it.</li><li>Separating model generation from deterministic test behavior through a provider abstraction.</li></ul></section>
+<section id="evidence" class="detail-section reveal"><p class="eyebrow">Evidence / Demo</p><h2>Sanitized synthetic workflow demonstration.</h2><p class="demo-label">Synthetic process-guide content — not proprietary documentation</p><div class="demo-chat"><div class="user-msg"><strong>User</strong><p>How do I prepare a sample change request?</p></div><div class="route-box"><span>Detected process</span><strong>Change workflow · Demo domain</strong></div><div class="source-box"><span>Retrieved source</span><strong>Demo Process Guide → Change Workflow → Preparation</strong><small>Example lines 42–56</small></div><div class="assistant-msg"><strong>Grounded answer</strong><p>1. Confirm the change scope and effective date. 2. Validate the required data fields. 3. Record the review evidence before submission. <span class="citation-demo">[DEMO-SRC-01]</span></p></div><div class="validation-box"><span>Validation</span><strong>Citation ID exists in supplied context · Pass</strong></div></div></section>
+<section class="detail-section reveal"><p class="eyebrow">Technologies</p><div class="tags large"><span>Python</span><span>Django</span><span>IBM watsonx.ai</span><span>BM25</span><span>RAG</span><span>SQLite</span><span>PyMuPDF</span><span>python-docx</span><span>BeautifulSoup</span><span>Docker</span><span>pytest</span></div></section>
+</div></div></section></main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Vinod Kumar N</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/vinod-kumar-n-34484a241" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:neelavinod26@gmail.com">Email</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer><script src="../js/script.js"></script></body></html>
